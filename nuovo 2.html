@@ -1,0 +1,120 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPEN DAY CRI BARLETTA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.cri.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/1') no-repeat center center fixed;
+            background-size: cover;
+            color: #000;
+        }
+        header {
+            background-color: #ff0000;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+            display: none; /* Nasconde il contenuto per default */
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            color: #ff0000;
+            font-family: 'Arial Black', Arial, sans-serif;
+        }
+        ul.activities {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        ul.activities li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            // Nascondi tutte le sezioni
+            var pages = document.querySelectorAll('.container');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+
+            // Mostra la sezione selezionata
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // Funzione per mostrare la pagina Home al caricamento iniziale
+        window.onload = function() {
+            showPage('home');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        OPEN DAY CRI BARLETTA
+    </header>
+    <nav>
+        <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('alcoolvista')">Alcool Vista</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="container">
+        <h2>Elenco Attività</h2>
+        <ul class="activities">
+            <li>Uso Occhiali Alcool vista</li>
+            <li>Pratiche di BLS su manichino con l'aiuto di un istruttore</li>
+            <li>Esposizione materiali di emergenza</li>
+            <li>Esposizione mezzi operativi</li>
+            <li>Info point per reclutamento volontari</li>
+        </ul>
+    </div>
+    <div id="alcoolvista" class="container">
+        <h2>Occhiali Alcool Vista</h2>
+        <p>Utilizzati per la percezione visiva dello stato di ebbrezza, sono stati progettati per rendere più efficaci i programmi educativi e didattici di sensibilizzazione contro l'abuso di alcol.</p>
+        <p>I volontari terranno attività destinate alla prevenzione e consentiranno ai partecipanti di utilizzare questi dispositivi percorrendo dei percorsi interattivi in cui simuleranno lo stato di ebrezza.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 CRI Barletta</p>
+    </footer>
+</body>
+</html>
